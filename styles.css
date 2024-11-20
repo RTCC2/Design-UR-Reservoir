@@ -107,4 +107,106 @@ button:hover {
     margin: 5px 0;
 }
 
+/* Responsive Design for Tablet and Mobile */
+@media (max-width: 1024px) {
+    /* Tablet */
+    .header {
+        height: 70px;
+        padding: 0 15px;
+    }
 
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .transparent-box {
+        width: 90%;
+    }
+
+    input, select, button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile */
+    .header {
+        height: 60px;
+        padding: 0 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .container {
+        margin-top: 80px;
+        padding: 10px;
+    }
+
+    .transparent-box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small Mobile */
+    .header {
+        height: 50px;
+        padding: 0 5px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container {
+        margin-top: 70px;
+        padding: 5px;
+    }
+
+    .transparent-box {
+        padding: 10px;
+    }
+
+    input, select, button {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    button {
+        padding: 5px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+}
