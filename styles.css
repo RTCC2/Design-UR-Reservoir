@@ -57,26 +57,36 @@ body {
     width: 80%;
 }
 
-/* Input and Output Sections */
-.input-section, #outputSection {
+/* Input Section */
+.input-section {
     display: flex;
-    flex-direction: column;
     gap: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch; /* Ensure boxes align vertically */
+    width: 100%;
 }
 
-.input-box, .dimension-section {
+.input-box {
+    flex: 1 1 calc(33.33% - 15px); /* Equal width, including gap */
     display: flex;
-    gap: 10px;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch; /* Stretch inputs to align */
+    max-width: 300px; /* Optional: Set a maximum width */
+    min-width: 200px; /* Optional: Set a minimum width */
 }
 
 label {
-    flex: 1;
+    font-size: 14px;
+    margin-bottom: 5px; /* Space between label and input */
 }
 
 input, select, button {
-    padding: 5px;
+    padding: 10px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
 }
 
 button {
@@ -93,69 +103,17 @@ button:hover {
     background: #0056b3;
 }
 
-#saranSection {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #fff;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    border-radius: 10px;
-}
-
-#saranMaterial, #peringatan {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-/* Responsive Design for Tablet and Mobile */
-@media (max-width: 1024px) {
-    /* Tablet */
-    .header {
-        height: 70px;
-        padding: 0 15px;
-    }
-
-    .header h1 {
-        font-size: 22px;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .transparent-box {
-        width: 90%;
-    }
-
-    input, select, button {
-        font-size: 15px;
-    }
-}
-
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
-    /* Mobile */
-    .header {
-        height: 60px;
-        padding: 0 10px;
+    .input-section {
+        flex-direction: column; /* Stack boxes vertically */
+        gap: 20px;
+        align-items: center;
     }
 
-    .header h1 {
-        font-size: 20px;
-    }
-
-    .logo {
-        width: 40px;
-        height: 40px;
-    }
-
-    .container {
-        margin-top: 80px;
-        padding: 10px;
-    }
-
-    .transparent-box {
-        width: 100%;
-        padding: 15px;
+    .input-box {
+        flex: 1 1 100%; /* Full width for each box */
+        max-width: 100%; /* Ensure it doesn't exceed container */
     }
 
     input, select, button {
@@ -165,45 +123,25 @@ button:hover {
 
     button {
         padding: 8px;
-    }
-
-    label {
-        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    /* Small Mobile */
-    .header {
-        height: 50px;
-        padding: 0 5px;
+    .input-section {
+        gap: 15px; /* Reduce gap on very small screens */
     }
 
-    .header h1 {
-        font-size: 18px;
-    }
-
-    .logo {
-        width: 30px;
-        height: 30px;
-    }
-
-    .container {
-        margin-top: 70px;
-        padding: 5px;
-    }
-
-    .transparent-box {
-        padding: 10px;
+    .input-box {
+        flex: 1 1 100%; /* Full width */
     }
 
     input, select, button {
         font-size: 12px;
-        padding: 5px;
+        padding: 6px;
     }
 
     button {
-        padding: 5px;
+        padding: 6px;
     }
 
     label {
